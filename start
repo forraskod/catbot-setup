@@ -43,6 +43,12 @@ fi
 
 sleep 5;
 
+WEBP_PWD=/tmp/cat-webpanel-password
+if test -f "$WEBP_PWD"; then
+    echo "No $WEBP_PWD exists. Speeling more..."
+    sleep 3;
+fi
+
 echo "Account generator password: `cat /tmp/cat-accgen2-password`"
 echo "IPC Web Panel password: `cat /tmp/cat-webpanel-password`"
 
